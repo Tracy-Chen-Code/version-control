@@ -1,8 +1,7 @@
-from datetime import datetime
+import datetime
 
-timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-with open("version.md", "w") as f:
-    f.write(f"Last updated: {timestamp}
-")
+now = datetime.datetime.now()
 
-print("version.md updated")
+with open("version.md", "w") as file:
+    file.write(f"Current date and time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+
